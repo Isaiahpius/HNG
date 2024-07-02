@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My PortFolio</title>
-    <link rel="stylesheet" href="stage-one-task.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <div class="nav">
-            <img src="Images/cover copy copy.png" alt="">
+            <img src="Images/cover copy copy.png" alt="Cover Image">
         </div>
         <div class="navigation">
             <div class="nav-list">
@@ -23,9 +23,7 @@
     </header>
 
     <div id="hero" class="hero-section">
-        
-        <img data-testid="slackProfilePicture" src="./Images/IMG_20210718_110107_875 1 (2).png" alt="">
-        
+        <img data-testid="slackProfilePicture" src="./Images/IMG_20210718_110107_875 1 (2).png" alt="Slack Profile Picture">
         <div class="hero-section-content">
             <h1 data-testid="slackDisplayName">Isaiah Pius</h1>
             <p data-testid="slackEmail">YOUNGKING96@YAHOO.COM</p>
@@ -46,21 +44,146 @@
         </div>
         <div>
             <h1>Leadership Advancement</h1>
+            <p>I don't just want to become a senior web developer alone. I also want other web developers to trace their web development origin to me</p>
+        </div>
+    </div>
+
+    <div id="currentTime">
+        <p>Current time(UTC): <span id="current-time" data-testid="currentTimeUTC"></span></p>
+        <p>Current Day: <span id="current-day" data-testid="currentDay"></span></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    setInterval(getTime, 1000);
+    getDay()
+  })
+  
+  function getTime(){
+    const timeElement = document.getElementById('current-time')
+    const currentTime = new Date()
+    const options = { timeZone: 'UTC', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+    const timeString = currentTime.toLocaleTimeString('en-GB', options);
+    timeElement.textContent = timeString
+  }
+  
+  function getDay(){
+    const dayElement = document.getElementById('current-day')
+    const currentDate = new Date()
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const day = weekdays[currentDate.getDay()]
+    dayElement.textContent = day
+  }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PortFolio</title>
+    <link rel="stylesheet" href="stage-one-task.css">
+</head> -->
+
+<body>
+    <!-- <header>
+        <div class="nav">
+            <img src="Images/cover copy copy.png" alt="">
+        </div>
+        <div class="navigation">
+            <div class="nav-list">
+                <a href="#hero">Home</a>
+                <a href="#">About</a>
+                <a href="#">Goals</a>
+            </div>
+        </div>
+    </header> -->
+<!-- 
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <p data-testid="slackDisplayName">Isaiah Pius</p>
+            <p data-testid="currentTimeUTC">Current Time UTC: Loading...</p>
+            <p data-testid="currentDay">Current Day: Loading...</p>
+            <p data-testid="slackEmail">YOUNGKING96@YAHOO.COM</p>
+            <div class="profile-image">
+                <img src="/Images/IMG_20210718_110107_875 1 (2).png" alt="Profile Picture" data-testid="slackProfilePicture">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <div id="hero" class="hero-section">
+        <img data-testid="slackProfilePicture" src="./Images/IMG_20210718_110107_875 1 (2).png" alt="">
+    
+        <div class="hero-section-content">
+            <h1 data-testid="slackDisplayName">Isaiah Pius</h1>
+            <p data-testid="slackEmail">YOUNGKING96@YAHOO.COM</p>
+            <p><a href="http://hng.tech/learn" data-testid="hngLink">HNG Tech</a></p>
+            <p><a href="http://keyword.dog" data-testid="keywordLink">Keyword</a></p>
+            <p><a href="http://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrapeanyweb</a></p>
+        </div>
+    </div> -->
+    
+
+    <!-- <div id="hero" class="hero-section">
+
+        <img data-testid="slackProfilePicture" src="./Images/IMG_20210718_110107_875 1 (2).png" alt="">
+
+        <div class="hero-section-content">
+            <h1 data-testid="slackDisplayName">Isaiah Pius</h1>
+            <p data-testid="slackEmail">YOUNGKING96@YAHOO.COM</p>
+            <p><a href="http://hng.tech/learn" data-testid="hngLink">HNG Tech</a></p>
+            <p><a href="http://keyword.dog" data-testid="keywordLink">Keyword</a></p>
+            <p><a href="http://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrapeanyweb</a></p>
+        </div>
+    </div> -->
+
+    <!-- <div class="mygoals">
+        <div>
+            <h1>Professional Advancement</h1>
+            <p>Two years from today, I want to become a senior web developer</p>
+        </div>
+        <div>
+            <h1>Personal Development</h1>
+            <p>Improve my personal development skills by exploring and utilizing other opportunities available</p>
+        </div>
+        <div>
+            <h1>Leadership Advancement</h1>
             <p>I don't just want to become a senior web developer alone. I also want other web developers to trace their
                 web development origin to me</p>
         </div>
     </div>
 
     <div id="currentTime">
+        <p data-testid="currentTimeUTC">Current Time in UTC: <span id="utc"></span></p>
+        <p data-testid="currentDay">Current Day of the Week: <span id="today"></span></p>
+    </div> -->
+
+    <!-- <div id="currentTime">
         <p data-testid="currentTimeUTC">current Time in UTC: <span id="utc"></span></p>
         <p data-testid="currentDay">Current Day of the Week <span id="today"></span></p></p>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         const utc = document.getElementById("utc")
         const today = document.getElementById("today")
-       function setDate() {
+        function setDate() {
             const UTCDay = new Date().getDay()
             today.textContent = Days[UTCDay]
         }
@@ -72,7 +195,58 @@
         setInterval(() => {
             setUTC()
         }, 1000);
-    </script>
+    </script> -->
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            displayCurrentTimeUTC();
+            displayCurrentDay();
+        });
+
+        function displayCurrentTimeUTC() {
+            const currentTimeUTCElement = document.querySelector('[data-testid="currentTimeUTC"]');
+            const now = new Date();
+            const options = { timeZone: 'UTC', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+
+            const timeString = now.toLocaleTimeString('en-GB', options);
+            currentTimeUTCElement.textContent = Current Time UTC: ${ timeString };
+        }
+
+        function displayCurrentDay() {
+            const currentDayElement = document.querySelector('[data-testid="currentDay"]');
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const now = new Date();
+            const dayOfWeek = daysOfWeek[now.getUTCDay()];
+            currentDayElement.textContent = Current Day: ${ dayOfWeek };
+        }
+
+        setInterval(displayCurrentTimeUTC, 1000);
+    </script> -->
+
+    <!-- <script>
+        const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const utc = document.getElementById("utc");
+        const today = document.getElementById("today");
+    
+        function setDate() {
+            const UTCDay = new Date().getUTCDay();
+            today.textContent = Days[UTCDay];
+        }
+    
+        setDate();
+    
+        function setUTC() {
+            const UTCDate = new Date().toUTCString();
+            utc.textContent = UTCDate;
+        }
+    
+        setUTC();  
+    
+        setInterval(() => {
+            setUTC();
+        }, 1000);
+    </script> -->
+
 
 </body>
 
