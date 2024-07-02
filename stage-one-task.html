@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My PortFolio</title>
+    <link rel="stylesheet" href="stage-one-task.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="nav">
+            <img src="Images/cover copy copy.png" alt="">
+        </div>
+        <div class="navigation">
+            <div class="nav-list">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Goals</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <!-- <img src="/Images/IMG_20200117_131430_170 1.png" alt=""> -->
+        <!-- <div> -->
+        <img src="/Images/IMG_20210718_110107_875 1 (2).png" alt="">
+        <!-- </div> -->
+        <div class="hero-section-content">
+            <h1 data-testid="slackDisplayName">Isaiah Pius</h1>
+            <p data-testid="slackEmail">YOUNGKING96@YAHOO.COM</p>
+            <p><a href="http://hng.tech/learn" data-testid="hngLink">HNG Tech</a></p>
+            <p><a href="http://keyword.dog" data-testid="keywordLink">Keyword</a></p>
+            <p><a href="http://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrapeanyweb</a></p>
+        </div>
+    </div>
+
+    <div class="mygoals">
+        <div>
+            <h1>Professional Advancement</h1>
+            <p>Two years from today, I want to become a senior web developer</p>
+        </div>
+        <div>
+            <h1>Personal Development</h1>
+            <p>Improve my personal development skills by exploring and utilizing other opportunities available</p>
+        </div>
+        <div>
+            <h1>Leadership Advancement</h1>
+            <p>I don't just want to become a senior web developer alone. I also want other web developers to trace their
+                web development origin to me</p>
+        </div>
+    </div>
+
+    <div id="currentTime">
+        <p data-testid="currentTimeUTC">current Time in UTC: <span id="utc"></span></p>
+        <p data-testid="currentDay">Current Day of the Week <span id="today"></span></p></p>
+    </div>
+
+    <script>
+        const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        const utc = document.getElementById("utc")
+        const today = document.getElementById("today")
+       function setDate() {
+            const UTCDay = new Date().getDay()
+            today.textContent = Days[UTCDay]
+        }
+        setDate()
+        function setUTC() {
+            const UTCDate = new Date().getTime()
+            utc.textContent = UTCDate
+        }
+        setInterval(() => {
+            setUTC()
+        }, 1000);
+    </script>
+
 </body>
+
 </html>

@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(243, 234, 234, 0.74);
+}
+header{
+    display: flex;
+    /* margin: 20px 110px; */
+    align-items: center;
+}
+.navigation a{
+    font-size: 30px;
+    text-decoration: none;
+    color: gray;
+    margin-left: 20px;
+}
+.nav{
+    flex-grow: 1;
+}
+.hero-section{
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.hero-section-content a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-section-content p{
+    font-size: 20px;
+}
+
+.mygoals{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #ff561a;
+    margin: 0px 15px;
+}
+.mygoals h1{
+    text-align: center;
+    color: #ffffff;
+}
+.mygoals p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mygoals{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0px 20px;
+    }
+    .hero-section{
+        flex-direction: column;
+        /* padding: 0px 10px; */
+    }
+    .hero-section-content{
+        text-align: center;
+    }
+    .navigation a{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+ 
